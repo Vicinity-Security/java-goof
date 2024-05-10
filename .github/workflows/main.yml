@@ -27,6 +27,7 @@ jobs:
           node-version: '14'
       - run: npm install snyk -g # install snyk
       - run: snyk -v
+      - run: snyk config set endpoint=${{ secrets.SNYK_URL}} # Snyk API url set to AU
       - run: snyk auth ${{ secrets.SNYK_TOKEN }} # snyk authentication using GH secrets
 
         # Generate the HTML report
