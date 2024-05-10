@@ -58,20 +58,20 @@ jobs:
           path: downloads
 
       # Add the artifact to Jira issues
-      - name: Download snyk-jira-sync-linux 
-        uses: actions/download-artifact@v3 
-        with: 
-          name: snyk-jira-sync 
-      # Match the artifact name uploaded during release process 
-      - name: Make executable 
-      - run: chmod +x snyk-jira-sync-linux 
-      - name: Run snyk-jira-sync-linux 
-              # Avoid embedding sensitive credentials directly in the workflow 
-              # Use secrets or environment variables instead 
-              env: SNYK_ORG_ID: ${{ secrets.SNYK_ORG_ID }} SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
-              run: ./snyk-jira-sync-linux --jiraProjectKey=TEAM_A 
-      - name: Upload snyk-jira-sync logs (optional) 
-        uses: actions/upload-artifact@v3 
-        with: 
-          name: snyk-jira-sync-logs  #jira path for the artifact
-          path: snyk-jira-sync.log # Replace with your log file path
+      # - name: Download snyk-jira-sync-linux 
+      #   uses: actions/download-artifact@v3 
+      #   with: 
+      #     name: snyk-jira-sync 
+      # # Match the artifact name uploaded during release process 
+      # - name: Make executable 
+      # - run: chmod +x snyk-jira-sync-linux 
+      # - name: Run snyk-jira-sync-linux 
+      #         # Avoid embedding sensitive credentials directly in the workflow 
+      #         # Use secrets or environment variables instead 
+      #         env: SNYK_ORG_ID: ${{ secrets.SNYK_ORG_ID }} SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }} 
+      #         run: ./snyk-jira-sync-linux --jiraProjectKey=TEAM_A 
+      # - name: Upload snyk-jira-sync logs (optional) 
+      #   uses: actions/upload-artifact@v3 
+      #   with: 
+      #     name: snyk-jira-sync-logs 
+      #     path: snyk-jira-sync.log # Replace with your log file path
