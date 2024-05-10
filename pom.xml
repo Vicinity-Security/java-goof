@@ -9,12 +9,6 @@
     <description>A collection of vulnerable Java apps</description>
     <url>https://github.com/snyk-labs/java-goof</url>
 
-    <modules>
-        <module>todolist-goof</module>
-        <module>log4shell-goof</module>
-    </modules>
-    <packaging>pom</packaging>
-
 <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -23,6 +17,12 @@
             <scope>test</scope>
           </dependency>
     </dependencies>
+    
+    <modules>
+        <module>todolist-goof</module>
+        <module>log4shell-goof</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <licenses>
         <license>
