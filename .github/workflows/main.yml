@@ -57,6 +57,7 @@ jobs:
           name: results
           path: downloads
 
+      # Include Jira for respective project boards
       # Add the artifact to Jira issues
       # - name: Download snyk-jira-sync-linux 
       #   uses: actions/download-artifact@v3 
